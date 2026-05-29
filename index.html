@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Labirinto</title>
+</head>
+
+<body>
+  <h1>Labirinto</h1>
+  <div class="finishBox">
+    <h2>Parabéns, chegou!</h2>
+    <button class="novamente" onclick="denovo()">NOVAMENTE?</button>
+  </div>
+  <div class="mapa">
+    <div class="jogador">
+      <div class="jogadorInt"></div>
+    </div>
+    <div class="parede a">
+      <div class="pensarBox">
+        <p>Já passei por aqui!</p>
+      </div>
+    </div>
+    <div class="parede b">
+      <div class="loadBox">
+        <div class="loading">
+          <div class="pontos"></div>
+          <div class="pontos"></div>
+          <div class="pontos"></div>
+          <div class="pontos"></div>
+          <div class="pontos"></div>
+          <div class="pontos"></div>
+        </div>
+        <p>Pensando...</p>
+      </div>
+    </div>
+    <div class="parede c">
+      <div class="crashBox">
+        <p>Bati!, vou tentar novamente.</p>
+      </div>
+    </div>
+    <div class="chegada"></div>
+  </div>
+  <div class="buttonbox">
+    <button onclick="play()">PLAY</button>
+    <button onclick="parar()">PARAR</button>
+    <button onclick="zerar()">ZERAR</button>
+  </div>
+</body>
+<script src="./scripts.js"></script>
+
+</html>

@@ -1,0 +1,278 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.mapa {
+    height: 300px;
+    width: 320px;
+    background-color: white;
+    position: absolute;
+}
+
+.jogador {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+
+.jogadorInt {
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.a {
+    height: 68px;
+    width: 207px;
+    background-color: black;
+    position: absolute;
+    top: 24px;
+    left: 45px;
+}
+
+.pensarBox {
+    height: 68px;
+    width: 207px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.b {
+    height: 68px;
+    width: 207px;
+    background-color: black;
+    position: absolute;
+    top: 116px;
+    left: 45px;
+}
+
+.loadBox {
+    height: 68px;
+    width: 207px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    z-index: -1;
+}
+
+.c {
+    height: 68px;
+    width: 207px;
+    background-color: black;
+    position: absolute;
+    top: 208px;
+    left: 45px;
+}
+
+.crashBox {
+    height: 68px;
+    width: 207px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.chegada {
+    height: 300px;
+    width: 20px;
+    background-color: green;
+    position: absolute;
+    right: 0px;
+}
+
+.buttonbox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    bottom: 0%;
+}
+
+button {
+    height: 25px;
+    width: 75px;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 0%;
+}
+
+.finishBox {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    backdrop-filter: blur(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 0px;
+    color: white;
+    -webkit-text-stroke: 2px green;
+    text-align: center;
+}
+
+.novamente {
+    position: fixed;
+    left: -300px;
+    height: 60px;
+    width: 200px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+p {
+    color: white;
+    margin: 0;
+}
+
+.loading {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+
+.pontos {
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+
+    left: 50%;
+    top: 50%;
+}
+
+.pontos:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(60deg) translateY(15px);
+}
+
+.pontos:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(120deg) translateY(15px);
+}
+
+.pontos:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(15px);
+}
+
+.pontos:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(240deg) translateY(15px);
+}
+
+.pontos:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(300deg) translateY(15px);
+}
+
+.pontos:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(360deg) translateY(15px);
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes batidaEsquerda {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+        border-radius: 10px;
+    }
+
+    50% {
+        transform: scaleX(0.65);
+        border-radius: 10px 15px 15px 10px;
+    }
+}
+
+@keyframes batidaDireita {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+        transform-origin: right;
+        border-radius: 10px;
+    }
+
+    50% {
+        transform: scaleX(0.65);
+        border-radius: 15px 10px 10px 15px;
+    }
+}
+
+@keyframes batidaCima {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+        transform-origin: top;
+        border-radius: 10px;
+    }
+
+    50% {
+        transform: scaleY(0.65);
+        border-radius: 10px 10px 15px 15px;
+    }
+}
+
+@keyframes batidaBaixo {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        border-radius: 10px;
+    }
+
+    50% {
+        transform: scaleY(0.65);
+        border-radius: 15px 15px 10px 10px;
+    }
+}
